@@ -46,20 +46,33 @@
         .firstsection {
             display: flex;
             justify-content: space-around;
+            align-items: center;
             margin: 23px 0;
         }
-        .firstsection > div{
+
+        .firstsection>div {
             width: 30%;
         }
-        .sectionleft{
+
+        .sectionleft {
             font-size: 3rem;
             margin: 30px 0;
         }
-        .sectionright{
+
+        .sectionright {
             margin: 50px 0;
         }
-        .name-color{
-            color: rgb(82, 30, 131);
+
+        .name-color {
+            color: rgb(113, 78, 146);
+        }
+
+        .right ul li a {
+            color: aliceblue;
+        }
+
+        .right ul li a:hover {
+            color: aquamarine;
         }
     </style>
 </head>
@@ -70,11 +83,11 @@
             <div class="left">Aaranyak's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>Contact Me</li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
@@ -84,13 +97,21 @@
         <section class="firstsection">
             <div class="sectionleft">
                 Hello, I am <span class="name-color">Aaranyak Santra</span>
-                <div>and I am an AI Engineer.</div>
+                <div>and I am a passionate AI Engineer.</div>
+                <span id="element"></span>
             </div>
             <div class="sectionright">
                 <img src="p1.jpg" alt="error" width="100%">
             </div>
         </section>
     </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['ML Engineer', 'Software Engineer', 'Blogger', 'Football enthusiast'],
+            typeSpeed: 50,
+        });
+    </script>
 </body>
 
 </html>
